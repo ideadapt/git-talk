@@ -1,154 +1,199 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-        <title>Jugend hackt Zürich 2023 - Git Vortrag</title>
+    <title>Jugend hackt Zürich 2023 - Git Vortrag</title>
 
-        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-        <meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
 
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-        <link rel="stylesheet" href="css/reveal.css">
-        <link rel="stylesheet" href="css/theme/white.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
 
-        <!-- Code syntax highlighting -->
-        <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-        <!-- Printing and PDF exports -->
-        <script>
-         var link = document.createElement( 'link' );
-         link.rel = 'stylesheet';
-         link.type = 'text/css';
-         link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-         document.getElementsByTagName( 'head' )[0].appendChild( link );
-        </script>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
 
-        <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
         <script src="lib/js/html5shiv.js"></script>
         <![endif]-->
 
-        <!-- custom styles -->
-        <link rel="stylesheet" href="custom/css/style.css">
+    <!-- custom styles -->
+    <link rel="stylesheet" href="custom/css/style.css">
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <div class="reveal">
+    <div class="reveal">
 
-            <div class="slides">
-                <!-- BEGIN OF SLIDES -->
+        <div class="slides">
+            <!-- BEGIN OF SLIDES -->
 
+            <section>
+                <img class="none-border" data-src="images/jugendhackt-logo.png" width="170">
+                <h1>Git</h1>
+                <h3>Verteilte Verionsverwaltung von Dateien</h3>
+                <p>
+                    <small>Ueli Kunz / ideadapt ● <a href="https://github.com/ideadapt">github.com/ideadapt</a></small>
+                </p>
+            </section>
+
+            <section>
+                <h2>Was ist Git?</h2>
+                <ul>
+                    <li>Versionsverwaltung für Dateien</li>
+                    <li>Strg-Z on Steroids 🚀</li>
+                </ul>
+            </section>
+            <section>
                 <section>
-                    <img class="none-border" data-src="images/jugendhackt-logo.png" width="170">
-                    <h1>Git</h1>
-                    <h3>Verteilte Verionsverwaltung von Dateien</h3>
-                    <p>
-                        <small>Ueli Kunz / ideadapt ● <a href="https://github.com/ideadapt">github.com/ideadapt</a></small>
-                    </p>
-                </section>
-
-                <section>
-                    <h2>Was ist Git?</h2>
+                    <h2>Was heißt Versionsverwaltung?</h2>
                     <ul>
-                        <li>Versionsverwaltung für Dateien</li>
-                        <li>Strg-Z on Steroids</li>
+                        <li class="fragment">hausarbeit.docx</li>
+                        <li class="fragment">hausarbeit2.docx</li>
+                        <li class="fragment">hausarbeit3.docx</li>
+                        <li class="fragment">hausarbeit-test.docx</li>
+                        <li class="fragment">hausarbeit-asdf.docx</li>
+                        <li class="fragment">...</li>
                     </ul>
                 </section>
                 <section>
-                    <section>
-                        <h2>Was heißt Versionsverwaltung?</h2>
-                        <ul>
-                            <li class="fragment">hausarbeit.docx</li>
-                            <li class="fragment">hausarbeit2.docx</li>
-                            <li class="fragment">hausarbeit3.docx</li>
-                            <li class="fragment">hausarbeit-test.docx</li>
-                            <li class="fragment">hausarbeit-asdf.docx</li>
-                            <li class="fragment">...</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Was heißt Versionsverwaltung?</h2>
-                        <img class="none-border" data-src="images/versionierung.png">
-                    </section>
+                    <h2>Was heißt Versionsverwaltung?</h2>
+                    <img class="none-border" data-src="images/versionierung.png">
+                    <p>Gleiche Datei - mehrere Versionen</p>
                 </section>
+            </section>
 
-                <section>
-                    <h2>Wie bedient man das denn?</h2>
+            <section>
+                <h2>Wie bedient man das denn?</h2>
 
-                    <p class="fragment" data-autoslide="1">
-                        Repository erstellen
-                    </p>
-                    <pre class="fragment"><code class="shell" data-trim>
+                <p class="fragment" data-autoslide="1">
+                    Repository erstellen
+                </p>
+                <pre class="fragment"><code class="shell" data-trim>
 $ git init
                     </code></pre>
 
-                    <p class="fragment" data-autoslide="1">
-                        Bestehende Datei mit Git überwachen
-                    </p>
-                    <pre class="fragment"><code class="shell" data-trim>
+                <p class="fragment" data-autoslide="1">
+                    Bestehende Datei mit Git überwachen
+                </p>
+                <pre class="fragment"><code class="shell" data-trim>
 $ git add hausarbeit.docx
                     </code></pre>
 
-                    <p class="fragment" data-autoslide="1">
-                        Änderungen speichern und eine Notiz dazu verfassen
-                    </p>
-                    <pre class="fragment"><code class="shell" data-trim>
+                <p class="fragment" data-autoslide="1">
+                    Änderungen speichern und eine Notiz dazu verfassen
+                </p>
+                <pre class="fragment"><code class="shell" data-trim>
 $ git commit -m "erste zwei kapitel meiner hausarbeit"
                     </code></pre>
-                </section>
+            </section>
 
-                <section>
-                    <h2>Nützlich</h2>
+            <section>
+                <h2>Nützlich</h2>
 
-                    <p>
-                        Aktuellen Stand der Datei-Überwachung einsehen
-                    </p>
-                    <pre><code class="shell" data-trim>
+                <p>
+                    Aktuellen Stand der Datei-Überwachung einsehen
+                </p>
+                <pre><code class="shell" data-trim>
 $ git status
                     </code></pre>
 
-                </section>
+            </section>
 
-                <section>
-                    <h2>Was ist GitHub?</h2>
-                    <ul>
-                        <li>Möglichkeit gemeinsam an Code zu arbeiten</li>
-                        <li>Soziales Netzwerk</li>
-                        <li>Webhoster für Git</li>
-                    </ul>
-                </section>
+            <section>
+                <img class="none-border"
+                    data-src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="170">
+                <h1>GitHub</h1>
+                <h3>Webhoster für Git Projekte</h3>
+            </section>
 
-                <section>
-                    <h3>Wer ist so auf GitHub?</h3>
-                    <ul>
-                        <li><a href="https://github.com/twbs/bootstrap">twbs/bootstrap</a></li>
-                        <li><a href="https://github.com/nodejs/node">nodejs/node</a></li>
-                        <li><a href="https://github.com/jquery/jquery">jquery/jquery</a></li>
-                        <li><a href="https://github.com/rails/rails">rails/rails</a></li>
-                        <li><a href="https://github.com/facebook/react">facebook/react</a></li>
-                        <li><a href="https://github.com/django/django">django/django</a></li>
-                        <li><a href="https://github.com/angular/angular.js">angular/angular.js</a></li>
-                    </ul>
-                </section>
+            <section>
+                <h2>Was ist GitHub?</h2>
+                <ul>
+                    <li>Möglichkeit gemeinsam an Code zu arbeiten</li>
+                    <li>Soziales Netzwerk</li>
+                    <li>Webhoster für Git Projekte (Repository)</li>
+                    <li>Einfaches Projektmanagement (Aufgabenliste, Milestones, Labels, ...)</li>
+                </ul>
+            </section>
 
-                <section>
-                    <h2>Tipps für GitHub</h2>
-                </section>
+            <section>
+                <h3>Wer ist so auf GitHub?</h3>
+                <ul>
+                    <li><a href="https://github.com/nodejs/node">nodejs/node</a></li>
+                    <li><a href="https://github.com/jquery/jquery">jquery/jquery</a></li>
+                    <li><a href="https://github.com/rails/rails">rails/rails</a></li>
+                    <li><a href="https://github.com/facebook/react">facebook/react</a></li>
+                    <li><a href="https://github.com/django/django">django/django</a></li>
+                    <li>Diese Präsentation</li>
+                </ul>
+            </section>
 
-                <section>
-                    <h2>Readme</h2>
-                    <p>
-                        Zeige was du machst und wie es bedient wird
-                    </p>
+            <section>
+                <h2>Mit Repository arbeiten - Setup</h2>
+                <ol>
+                    <li class="fragment"> GitHub Account erstellen
+                    </li>
+                    <li class="fragment">
+                        Neues Repository / Projekt auf GitHub anlegen
+                    </li>
+                    <li class="fragment">
+                        Repository herunterladen / clonen
+                        <small>Am einfachsten mit einem Desktop Client oder der GitHub CLI
+                            https://cli.github.com/</small>
+                    </li>
+                    <li class="fragment">
+                        Alternativ: Clonen via git CLI
+                        <pre><code class="shell" data-trim>
+                        $ git clone https://github.com/ideadapt/git-talk.git
+                        </code></pre>
+                    </li>
+                </ol>
+            </section>
 
-                    <pre><code class="md" data-trim>
+            <section>
+                <h2>Mit Repository arbeiten - Kollaboration</h2>
+                <ol>
+                    <li class="fragment">Neuste Änderungen herunterladen (git pull origin main)
+                    </li>
+                    <li class="fragment">Neue Änderungen machen & committen (git add, git commit)
+                    </li>
+                    <li class="fragment">
+                        Meine neuen Änderungen auf GitHub hochladen (git push origin main)
+                        <small>Falls in der Zwischenzeit (seit 1.) mein Kollege pushed hat, muss ich zuerst nochmals pullen</small>
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Tipps für GitHub</h2>
+            </section>
+
+            <section>
+                <h2>readme.md</h2>
+                <p>
+                    Zeige was du machst und wie es bedient wird
+                </p>
+
+                <pre><code class="md" data-trim>
 # Das ist unser tolles Projekt
 
 Es kann Einhörner auf Regenbögen tanzen lassen.
@@ -159,82 +204,74 @@ Wenn du es benutzen willst, dann mach das:
 
 Wenn ein Fehler kommt, dann schau mal [hier](http://hilfe.de)
                     </code></pre>
+                <p>
+                    <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">
+                        <small>Markdown Spickzettel</small>
+                    </a>
+                </p>
+            </section>
 
-                    <p>
-                        <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">
-                            <small>Markdown Spickzettel</small>
-                        </a>
-                    </p>
-                </section>
+            <section>
+                <h2>Klingt cool! Würde ich gerne ausprobieren!</h2>
+                <p>
+                    <a href="https://git-scm.com/download">Download git</a>
+                </p>
+            </section>
 
-                <section>
-                    <h2>Klingt cool! würde ich gerne ausprobieren</h2>
+            <section>
+                <h2>Gibt es da noch mehr?</h2>
+                <p>Anfänger:
+                    <a href="https://rogerdudler.github.io/git-guide/index.de.html">git - Der einfache Einstieg</a>
+                    <a href="https://learngitbranching.js.org/?NODEMO=&locale=de_DE">learngitbranching.js.org</a>
+                </p>
+                <p>Fortgeschrittene:
+                    <a href="https://git-scm.com/book/de/v2/Git-Branching-Einfaches-Branching-und-Merging">Git
+                        Branching</a>
+                </p>
+                <p>Profi:
+                    <a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful git branching model
+                        (englisch)</a>
+                </p>
+            </section>
 
-                    <p>
-                        <a href="https://git-scm.com/download/win">Windows</a>
-                    </p>
-                    <p>
-                        <a href="https://git-scm.com/download/mac">Max OSX</a>
-                    </p>
-                    <p>
-                        Linux - wie immer im Paket-Manager ;)
-                        <small>
-                            Auf USB-Stick von Jugend hackt ist git vorinstalliert
-                        </small>
-                    </p>
-                </section>
+            <section>
+                <h2>War mir zu schnell!</h2>
+                <a href="https://ideadapt.github.io/git-talk">ideadapt.github.io/git-talk</a>
+            </section>
 
-                <section>
-                    <h2>Gibt es da noch mehr?</h2>
-                    <p>Anfänger:
-                        <a href="https://rogerdudler.github.io/git-guide/index.de.html">git - Der einfache Einstieg</a>
-                        <a href="https://learngitbranching.js.org/?NODEMO=&locale=de_DE">https://learngitbranching.js.org/</a>
-                    </p>
-                    <p>Fortgeschrittene:
-                        <a href="https://git-scm.com/book/de/v1/Git-Branching-Einfaches-Branching-und-Merging">Git Branching</a>
-                    </p>
-                    <p>Profi:
-                        <a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful git branching model (englisch)</a>
-                    </p>
-                </section>
-
-                <section>
-                    <h2>War mir zu schnell!</h2>
-                    <a href="https://ideadapt.github.io/git-talk/">https://ideadapt.github.io/git-talk/</a>
-                </section>
-
-                <!-- END OF SLIDES -->
-            </div>
-
+            <!-- END OF SLIDES -->
         </div>
 
-        <script src="lib/js/head.min.js"></script>
-        <script src="js/reveal.js"></script>
+    </div>
 
-        <script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
 
-         // Full list of configuration options available at:
-         // https://github.com/hakimel/reveal.js#configuration
-         Reveal.initialize({
-             controls: true,
-             progress: true,
-             history: true,
-             center: true,
+    <script>
 
-             transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
 
-             // Optional reveal.js plugins
-             dependencies: [
-                 { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                 { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                 { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                 { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-                 { src: 'plugin/zoom-js/zoom.js', async: true },
-                 { src: 'plugin/notes/notes.js', async: true }
-             ]
-         });
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-        </script>
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+                { src: 'plugin/notes/notes.js', async: true }
+            ]
+        });
 
-    </body>
+    </script>
+
+</body>
+
 </html>
