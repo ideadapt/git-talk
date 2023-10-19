@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Jugend hackt Heidelberg 2020 - Github Vortrag</title>
+        <title>Jugend hackt Zürich 2023 - Git Vortrag</title>
 
         <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
         <meta name="author" content="Hakim El Hattab">
@@ -47,36 +47,82 @@
 
                 <section>
                     <img class="none-border" data-src="images/jugendhackt-logo.png" width="170">
-                    <h1>Github</h1>
-                    <h3>Remote die Welt verbessern</h3>
+                    <h1>Git</h1>
+                    <h3>Verteilte Verionsverwaltung von Dateien</h3>
                     <p>
-                        <small>Steffen ● <a href="https://github.com/steffenschroeder">github.com/steffenschroeder</a></small>
+                        <small>Ueli Kunz / ideadapt ● <a href="https://github.com/ideadapt">github.com/ideadapt</a></small>
                     </p>
-                    <p>
-                        <small>Vorlage von JH Süd: Christian van Onzenoodt ● <a href="https://github.com/onc">github.com/onc</a></small>
-                    </p>
-                    <aside class="notes">
-                        <p>
-                            Fragen
-                        </p>
-                        <p>
-                            Wer kennt github?
-                        </p>
-                        <p>
-                            Hat mal was herrunter/hoch geladen?
-                        </p>
-                    </aside>
                 </section>
 
                 <section>
-                    <h2>Was ist Github?</h2>
+                    <h2>Was ist Git?</h2>
+                    <ul>
+                        <li>Versionsverwaltung für Dateien</li>
+                        <li>Strg-Z on Steroids</li>
+                    </ul>
+                </section>
+                <section>
+                    <section>
+                        <h2>Was heißt Versionsverwaltung?</h2>
+                        <ul>
+                            <li class="fragment">hausarbeit.docx</li>
+                            <li class="fragment">hausarbeit2.docx</li>
+                            <li class="fragment">hausarbeit3.docx</li>
+                            <li class="fragment">hausarbeit-test.docx</li>
+                            <li class="fragment">hausarbeit-asdf.docx</li>
+                            <li class="fragment">...</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Was heißt Versionsverwaltung?</h2>
+                        <img class="none-border" data-src="images/versionierung.png">
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Wie bedient man das denn?</h2>
+
+                    <p class="fragment" data-autoslide="1">
+                        Repository erstellen
+                    </p>
+                    <pre class="fragment"><code class="shell" data-trim>
+$ git init
+                    </code></pre>
+
+                    <p class="fragment" data-autoslide="1">
+                        Bestehende Datei mit Git überwachen
+                    </p>
+                    <pre class="fragment"><code class="shell" data-trim>
+$ git add hausarbeit.docx
+                    </code></pre>
+
+                    <p class="fragment" data-autoslide="1">
+                        Änderungen speichern und eine Notiz dazu verfassen
+                    </p>
+                    <pre class="fragment"><code class="shell" data-trim>
+$ git commit -m "erste zwei kapitel meiner hausarbeit"
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Nützlich</h2>
+
+                    <p>
+                        Aktuellen Stand der Datei-Überwachung einsehen
+                    </p>
+                    <pre><code class="shell" data-trim>
+$ git status
+                    </code></pre>
+
+                </section>
+
+                <section>
+                    <h2>Was ist GitHub?</h2>
                     <ul>
                         <li>Möglichkeit gemeinsam an Code zu arbeiten</li>
                         <li>Soziales Netzwerk</li>
                         <li>Webhoster für Git</li>
                     </ul>
-                    <aside class="notes">
-                    </aside>
                 </section>
 
                 <section>
@@ -89,93 +135,7 @@
                         <li><a href="https://github.com/facebook/react">facebook/react</a></li>
                         <li><a href="https://github.com/django/django">django/django</a></li>
                         <li><a href="https://github.com/angular/angular.js">angular/angular.js</a></li>
-                        <li><a href="https://github.com/adobe/brackets">adobe/brackets</a></li>
-                        <li><a href="https://github.com/zurb/foundation">zurb/foundation</a></li>
                     </ul>
-                </section>
-                <section>
-                    <h2>Warte... Was ist Git?</h2>
-                    <ul>
-                        <li>Versionsverwaltung für Dateien</li>
-                        <li>Strg-Z für Profis</li>
-                    </ul>
-                </section>
-                <section>
-                <section>
-                    <h2>Was heißt Versionsverwaltung?</h2>
-                    <ul>
-                        <li class="fragment">hausarbeit.docx</li>
-                        <li class="fragment">hausarbeit2.docx</li>
-                        <li class="fragment">hausarbeit3.docx</li>
-                        <li class="fragment">hausarbeit-test.docx</li>
-                        <li class="fragment">hausarbeit-asdf.docx</li>
-                        <li class="fragment">...</li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>Was heißt Versionsverwaltung?</h2>
-                    <img class="none-border" data-src="images/versionierung.png">
-                </section>
-                </section>
-
-                <section>
-                    <h2>Wie bedient man das denn?</h2>
-
-                    <p class="fragment" data-autoslide="1">
-                        Kopie auf den eigenen Rechner laden
-                    </p>
-                    <pre class="fragment"><code class="shell" data-trim>
-$ git clone https://github.com/...
-                    </code></pre>
-
-                    <p class="fragment" data-autoslide="1">
-                        Dateien zum Index hinzufügen
-                    </p>
-                    <pre class="fragment"><code class="shell" data-trim>
-$ git add readme.md
-                    </code></pre>
-
-                    <p class="fragment" data-autoslide="1">
-                        Commit mit Nachricht abschließen
-                    </p>
-                    <pre class="fragment"><code class="shell" data-trim>
-$ git commit -m "readme bearbeitet"
-                    </code></pre>
-
-                    <p class="fragment" data-autoslide="1">
-                        Veränderungen auf den Server laden
-                    </p>
-                    <pre class="fragment"><code class="shell" data-trim>
-$ git push origin master
-                    </code></pre>
-                </section>
-
-                <section>
-                    <h2>Wichtig!</h2>
-
-                    <span class="fragment">
-                        <p>
-                            Bevor die Arbeit los geht einmal
-                        </p>
-                        <pre><code class="shell" data-trim>
-$ git pull
-                        </code></pre>
-                        <p>
-                            Um den aktuellen Stand zu bekommen
-                        </p>
-                    </span>
-                </section>
-
-                <section>
-                    <h2>Nützlich</h2>
-
-                    <p>
-                        Stand des lokalen Repos einsehen
-                    </p>
-                    <pre><code class="shell" data-trim>
-$ git status
-                    </code></pre>
-
                 </section>
 
                 <section>
@@ -208,43 +168,6 @@ Wenn ein Fehler kommt, dann schau mal [hier](http://hilfe.de)
                 </section>
 
                 <section>
-                    <h2>Wähle eine Lizenz für dein Projekt</h2>
-                    <table>
-                        <tr>
-                            <th></th>
-                            <th>MIT Lizenz (Expat)</th>
-                            <th>GNU General Public License v2.0 (GPL)</th>
-                        </tr>
-                        <tr>
-                            <td>einsehen</td>
-                            <td class="green-color">✓</td>
-                            <td class="green-color">✓</td>
-                        </tr>
-                        <tr>
-                            <td>verwenden</td>
-                            <td class="green-color">✓</td>
-                            <td class="green-color">✓</td>
-                        </tr>
-                        <tr>
-                            <td>kopieren</td>
-                            <td class="green-color">✓</td>
-                            <td class="green-color">✓</td>
-                        </tr>
-                        <tr>
-                            <td>verändern</td>
-                            <td class="green-color">✓</td>
-                            <td class="green-color">✓</td>
-                        </tr>
-                        <tr class="fragment">
-                            <td>copyleft</td>
-                            <td class="red-color">✗</td>
-                            <td class="green-color">✓</td>
-                        </tr>
-                    </table>
-
-                </section>
-
-                <section>
                     <h2>Klingt cool! würde ich gerne ausprobieren</h2>
 
                     <p>
@@ -254,7 +177,10 @@ Wenn ein Fehler kommt, dann schau mal [hier](http://hilfe.de)
                         <a href="https://git-scm.com/download/mac">Max OSX</a>
                     </p>
                     <p>
-                        Linux - Wie immer im Paket-Manager ;)
+                        Linux - wie immer im Paket-Manager ;)
+                        <small>
+                            Auf USB-Stick von Jugend hackt ist git vorinstalliert
+                        </small>
                     </p>
                 </section>
 
@@ -274,11 +200,7 @@ Wenn ein Fehler kommt, dann schau mal [hier](http://hilfe.de)
 
                 <section>
                     <h2>War mir zu schnell!</h2>
-                    <a href="https://steffenschroeder.github.io/git-talk/">https://steffenschroeder.github.io/git-talk/</a>
-                </section>
-
-                <section>
-                    <h1>happy hacking</h1>
+                    <a href="https://ideadapt.github.io/git-talk/">https://ideadapt.github.io/git-talk/</a>
                 </section>
 
                 <!-- END OF SLIDES -->
